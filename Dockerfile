@@ -14,7 +14,7 @@ WORKDIR $PROJECT_PATH
 RUN make dev-requirements
 RUN make
 
-FROM alpine:latest AS production
+FROM alpine:3.19.1 AS production
 
 WORKDIR /root/
 RUN apk --no-cache add ca-certificates tzdata
